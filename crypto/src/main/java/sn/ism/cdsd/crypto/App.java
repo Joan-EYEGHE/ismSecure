@@ -8,6 +8,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+       String chaine="a1398967867843564785feb2";
+       CryptoImpl crypto=new CryptoImpl();
+       
+        byte[] tab = crypto.hexStringToBytes(chaine);
+        System.out.println(tab);
+        String newChaine = crypto.bytesToHexString(tab);
+        System.out.println("nouvelle:"+newChaine);
+        System.out.println("olde    :"+chaine);
+        
     }
 }
